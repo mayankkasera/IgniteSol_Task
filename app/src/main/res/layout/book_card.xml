@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cv_book"
+        android:layout_width="114dp"
+        android:layout_height="162dp"
+        app:cardCornerRadius="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_menu_book_24"
+                android:id="@+id/iv_default_thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cv_book"
+        android:layout_height="wrap_content"
+        android:layout_width="114dp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+
+        <TextView
+            android:textAllCaps="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:id="@+id/bookName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+        <TextView
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorGrey"
+            android:layout_below="@+id/bookName"
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/autherName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -16,10 +16,10 @@ import javax.inject.Inject
  */
 class BooksRepository @Inject constructor(private val booksDataSource: BooksRemoteDataSource){
 
-    suspend fun fetchBooks() : Flow<Result<BookResponse?>?>{
+    suspend fun fetchBooks(topic: String, page: Int) : Flow<Result<BookResponse?>?>{
         return flow{
             emit(Result.loading())
-            val result = booksDataSource.fetchListOfBooks()
+            val result = booksDataSource.fetchListOfBooks(topic, page)
             emit(result)
         }.flowOn(Dispatchers.IO)
 

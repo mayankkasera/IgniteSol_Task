@@ -17,13 +17,11 @@ class BooksViewModel @Inject constructor(private val booksRepository: BooksRepos
     private val _bookList = MutableLiveData<Result<BookResponse?>>()
     val booksList = _bookList
 
-    init {
-        fetchBooks()
-    }
 
-    private fun fetchBooks() {
+
+    fun fetchBooks(topic: String, page: Int) {
         viewModelScope.launch {
-            booksRepository.fetchBooks().collect {
+            booksRepository.fetchBooks(topic, page).collect {
                 _bookList.value = it
             }
         }
