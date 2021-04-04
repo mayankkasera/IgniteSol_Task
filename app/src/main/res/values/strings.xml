@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">IgniteSol_Task</string>
+
+    <string name="search_hint">Search</string>
+    <string name="adventure">ADVENTURE</string>
+    <string name="history">HISTORY</string>
+    <string name="philosophy">PHILOSOPHY</string>
+    <string name="politics">POLITICS</string>
+    <string name="humor">HUMOR</string>
+    <string name="drama">DRAMA</string>
+    <string name="fiction">FICTION</string>
+    <string name="sub_heading">A social cataloging website that allows you to freely search its database of books, annotations, and reviews.</string>
+    <string name="heading">Gutenberg Project</string>
+
 </resources>

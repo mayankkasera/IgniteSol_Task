@@ -1,4 +1,4 @@
-package com.mayank.ignitesol_task.ui.main
+package com.mayank.ignitesol_task.ui.booklist
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val booksRepository: BooksRepository) : ViewModel()  {
+class BooksViewModel @Inject constructor(private val booksRepository: BooksRepository) : ViewModel()  {
 
     private val _bookList = MutableLiveData<Result<BookResponse?>>()
     val booksList = _bookList
